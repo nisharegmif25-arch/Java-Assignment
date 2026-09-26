@@ -1,0 +1,224 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--ink-soft);
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* ---- Form ---- */
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.task-form input[type="text"]:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.task-form select {
+  padding: 0.65rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.task-form button {
+  background: var(--accent);
+  color: white;
+  padding: 0.65rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.task-form button:hover {
+  background: var(--accent-hover);
+}
+
+/* ---- Stats ---- */
+.task-stats {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---- Filters ---- */
+.task-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.filter-group button {
+  background: transparent;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  border-radius: 6px;
+}
+
+.filter-group button.active {
+  background: var(--ink);
+  color: white;
+}
+
+.task-filters select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 0.85rem;
+}
+
+/* ---- List ---- */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--ink-soft);
+}
+
+.task-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.task-tag {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tag-personal {
+  background: #e4ecf7;
+  color: #3a5a8c;
+}
+
+.tag-work {
+  background: #ece3f4;
+  color: #6b4c94;
+}
+
+.tag-urgent {
+  background: #f6e2dd;
+  color: #a1442f;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.task-actions button {
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.task-actions button:hover {
+  color: var(--ink);
+}
+
+.edit-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.edit-form input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.edit-form button {
+  background: var(--ink);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 2.5rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .task-form {
+    flex-wrap: wrap;
+  }
+  .task-form input[type="text"] {
+    width: 100%;
+  }
+}
